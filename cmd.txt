@@ -1,0 +1,1 @@
+robot --variable BROWSER:Firefox --outputdir ../Reports Login.robot

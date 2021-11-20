@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on darwin)" generated="20211110 15:15:01.290" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="/Users/hohung/Documents/MotionCloud/Automation/qa-automation-projects/TestSuite/Login.robot">
+<test id="s1-t1" name="Imap">
+<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211110 15:15:01.407" endtime="20211110 15:15:01.407"/>
+</kw>
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=imap.gmail.com</arg>
+<arg>user=hunghq8988@gmail.com</arg>
+<arg>password=Lobanhmi0809</arg>
+<arg>port=993</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20211110 15:15:01.407" endtime="20211110 15:15:02.925"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${LATEST}</var>
+<arg>sender=no-reply@motionscloud.com</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20211110 15:15:03.514" level="INFO">${LATEST} = 1346</msg>
+<status status="PASS" starttime="20211110 15:15:02.926" endtime="20211110 15:15:03.514"/>
+</kw>
+<kw name="Walk Multipart Email" library="ImapLibrary2">
+<var>${Parts}</var>
+<arg>${LATEST}</arg>
+<doc>Returns total parts of a multipart email message on given ``email_index``.
+Email message is cache internally to be used by other multipart keywords:
+`Get Multipart Content Type`, `Get Multipart Field`, `Get Multipart Field Names`,
+`Get Multipart Field`, and `Get Multipart Payload`.</doc>
+<msg timestamp="20211110 15:15:03.818" level="INFO">${Parts} = 2</msg>
+<status status="PASS" starttime="20211110 15:15:03.515" endtime="20211110 15:15:03.818"/>
+</kw>
+<kw name="Get Multipart Field Names" library="ImapLibrary2">
+<var>@{fields}</var>
+<doc>Returns all available header field names of selected multipart email message.</doc>
+<msg timestamp="20211110 15:15:03.819" level="INFO">@{fields} = [ Delivered-To | Received | X-Google-Smtp-Source | X-Received | ARC-Seal | ARC-Message-Signature | ARC-Authentication-Results | Return-Path | Received | Received-SPF | Authentication-Results | DKIM-Si...</msg>
+<status status="PASS" starttime="20211110 15:15:03.819" endtime="20211110 15:15:03.820"/>
+</kw>
+<kw name="Get Multipart Field" library="ImapLibrary2">
+<var>${Subject}</var>
+<arg>Subject</arg>
+<doc>Returns the value of given header ``field`` name.</doc>
+<msg timestamp="20211110 15:15:03.820" level="INFO">${Subject} = First AR photo coming for AI claim - WintecTest1</msg>
+<status status="PASS" starttime="20211110 15:15:03.820" endtime="20211110 15:15:03.820"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Subject}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211110 15:15:03.821" endtime="20211110 15:15:03.821"/>
+</kw>
+<kw name="Get Multipart Payload" library="ImapLibrary2">
+<var>${payload}</var>
+<arg>decode=False</arg>
+<doc>Returns the payload of current part of selected multipart email message.</doc>
+<msg timestamp="20211110 15:15:03.823" level="FAIL">AttributeError: 'list' object has no attribute 'decode'</msg>
+<status status="FAIL" starttime="20211110 15:15:03.821" endtime="20211110 15:15:03.823"/>
+</kw>
+<kw name="Close Mailbox" library="ImapLibrary2">
+<doc>Close IMAP email client session.</doc>
+<status status="NOT RUN" starttime="20211110 15:15:03.824" endtime="20211110 15:15:03.824"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211110 15:15:03.825" endtime="20211110 15:15:03.825"/>
+</kw>
+<status status="FAIL" starttime="20211110 15:15:01.407" endtime="20211110 15:15:03.825">AttributeError: 'list' object has no attribute 'decode'</status>
+</test>
+<status status="FAIL" starttime="20211110 15:15:01.291" endtime="20211110 15:15:03.826"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
