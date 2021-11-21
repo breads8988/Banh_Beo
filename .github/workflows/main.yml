@@ -31,3 +31,8 @@ jobs:
         with:
           name: robotframework report
           path: reports
+      - name : Download Test results
+        - uses: actions/download-artifact@v2
+        with:
+            name: robotframework report
+            path: ${PWD}
