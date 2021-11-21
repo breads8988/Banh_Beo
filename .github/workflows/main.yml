@@ -26,8 +26,8 @@ jobs:
             -e BROWSER=chrome \
             ppodgorsek/robot-framework:latest
       - name: Upload test results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: robotframework report
-          path: reports
+          path: ${PWD}/Reports
