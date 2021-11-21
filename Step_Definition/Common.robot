@@ -17,6 +17,7 @@ Resource            ../Step_Definition/Admin.robot
 Resource            ../Step_Definition/Insurer.robot
 
 *** Variables ***
+${BROWSER}		%{BROWSER}
 
 *** Keywords ***
 Navigate_to_Landing_Page
