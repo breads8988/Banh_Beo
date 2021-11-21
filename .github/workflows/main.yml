@@ -14,14 +14,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create folder for reports
-        run: mkdir reports
+        run: mkdir Reports
       - name: Robot Framework Test
         # NOTE: joonvena/robotframework-docker-action@v0.1 had permissions issue
         # This action is based on a Docker image. I had to fall back to that image
         # and use --user flag
         run: |
           docker run \
-            -v ${PWD}/reports:/opt/robotframework/reports:Z \
+            -v ${PWD}/Reports:/opt/robotframework/reports:Z \
             -v $/TestSuite/Login:/opt/robotframework/tests:Z \
             --user $(id -u):$(id -g) \
             -e BROWSER=chrome \
