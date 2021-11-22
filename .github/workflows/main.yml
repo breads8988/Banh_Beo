@@ -44,9 +44,9 @@ jobs:
             # Required mail server port:
             server_port: 465
             # Optional (recommended): mail server username:
-            username: ${{secrets.MAIL_USERNAME}}
+            #username: ${{secrets.MAIL_USERNAME}}
             # Optional (recommended) mail server password:
-            password: ${{secrets.MAIL_PASSWORD}}
+            #password: ${{secrets.MAIL_PASSWORD}}
             # Required mail subject:
             subject: Github Actions job result
             # Required recipients' addresses:
@@ -54,7 +54,7 @@ jobs:
             # Required sender full name (address can be skipped):
             from: Automation Team # <user@example.com>
             # Optional whether this connection use TLS (default is true if server_port is 465)
-            #secure: true
+            secure: true
             # Optional plain body:
             body: Build job of ${{github.repository}} completed successfully!
             # Optional HTML body read from file:
