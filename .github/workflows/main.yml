@@ -25,19 +25,19 @@ jobs:
             --user $(id -u):$(id -g) \
             -e BROWSER=chrome \
             ppodgorsek/robot-framework:latest
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: robotframework report
-          path: reports
-      - name : Download Test results
-        uses: actions/download-artifact@v2
-        with:
-          name: robotframework report
-          path: reports
-      - name: Debug
-        run: ls -la && pwd && chmod ugo+rwx reports
+      #- name: Upload test results
+        #uses: actions/upload-artifact@v2
+        #if: always()
+        #with:
+          #name: robotframework report
+          #path: reports
+      #- name : Download Test results
+        #uses: actions/download-artifact@v2
+        #with:
+          #name: robotframework report
+          #path: reports
+      #- name: Debug
+        #run: ls -la && pwd && chmod ugo+rwx reports
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
