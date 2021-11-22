@@ -39,7 +39,7 @@ jobs:
       - name: zip report
         uses: papeloto/action-zip@v1
         with:
-          files: ${PWD}/reports
+          files: /home/runner/work/Banh_Beo/Banh_Beo/reports
           dest: ${PWD}/reports.zip
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
