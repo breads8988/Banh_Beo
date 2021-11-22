@@ -36,6 +36,8 @@ jobs:
         with:
           name: robotframework report
           path: reports
+      - name: Debug
+        run: ls - la ${PWD}/reports
       - name: zip report
         uses: papeloto/action-zip@v1
         with:
