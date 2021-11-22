@@ -36,6 +36,9 @@ jobs:
         with:
           name: robotframework report
           path: reports
+      - name: zip report
+        run: apt-get install zip && zip -r ${PWD}/reports.zip ${PWD}/reports
+        
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
@@ -72,6 +75,6 @@ jobs:
             # Optional converting Markdown to HTML (set content_type to text/html too):
             #convert_markdown: true
             # Optional attachments:
-            #attachments: attachments.zip,git.diff,./dist/static/*.js
+            attachments: ${PWD}/reports.zip
             # Optional priority: 'high', 'normal' (default) or 'low'
             #priority: low
