@@ -56,7 +56,7 @@ jobs:
             # Optional whether this connection use TLS (default is true if server_port is 465)
             #secure: true
             # Optional plain body:
-            body: Build job of ${{github.repository}} completed successfully!
+            body: Build job of ${{github.repository}} completed successfully! Test Reult : 
             # Optional HTML body read from file:
             #html_body: file://README.html
             # Optional carbon copy recipients:
@@ -74,4 +74,4 @@ jobs:
             # Optional attachments:
             #attachments: attachments.zip,git.diff,./dist/static/*.js
             # Optional priority: 'high', 'normal' (default) or 'low'
-            #priority: low      
+            #priority: low
