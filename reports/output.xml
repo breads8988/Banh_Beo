@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.0 on linux)" generated="20211122 11:25:24.594" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.0 on linux)" generated="20211122 11:30:35.705" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/opt/robotframework/tests">
 <suite id="s1-s1" name="TestSuite" source="/opt/robotframework/tests/TestSuite">
 <suite id="s1-s1-s1" name="Login" source="/opt/robotframework/tests/TestSuite/Login.robot">
@@ -7,7 +7,7 @@
 <kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
 <arg>0.5</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20211122 11:25:24.921" endtime="20211122 11:25:24.921"/>
+<status status="PASS" starttime="20211122 11:30:36.014" endtime="20211122 11:30:36.014"/>
 </kw>
 <kw name="Navigate_to_Landing_Page" library="Common">
 <arg>Landing</arg>
@@ -16,29 +16,29 @@
 <arg>${BROWSER}</arg>
 <arg>${Alias}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211122 11:25:24.923" level="INFO">Opening browser 'chrome' to base url 'https://mcall-uat.motionscloud.com/users/sign_in?locale=en'.</msg>
-<status status="PASS" starttime="20211122 11:25:24.922" endtime="20211122 11:25:28.332"/>
+<msg timestamp="20211122 11:30:36.015" level="INFO">Opening browser 'chrome' to base url 'https://mcall-uat.motionscloud.com/users/sign_in?locale=en'.</msg>
+<status status="PASS" starttime="20211122 11:30:36.015" endtime="20211122 11:30:39.504"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211122 11:25:28.332" endtime="20211122 11:25:28.970"/>
+<status status="PASS" starttime="20211122 11:30:39.505" endtime="20211122 11:30:40.146"/>
 </kw>
-<status status="PASS" starttime="20211122 11:25:24.922" endtime="20211122 11:25:28.970"/>
+<status status="PASS" starttime="20211122 11:30:36.014" endtime="20211122 11:30:40.147"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20211122 11:25:28.971" endtime="20211122 11:25:29.530"/>
+<status status="PASS" starttime="20211122 11:30:40.147" endtime="20211122 11:30:40.708"/>
 </kw>
-<status status="PASS" starttime="20211122 11:25:24.920" endtime="20211122 11:25:29.530"/>
+<status status="PASS" starttime="20211122 11:30:36.013" endtime="20211122 11:30:40.708"/>
 </test>
-<status status="PASS" starttime="20211122 11:25:24.623" endtime="20211122 11:25:29.532"/>
+<status status="PASS" starttime="20211122 11:30:35.733" endtime="20211122 11:30:40.709"/>
 </suite>
 <suite id="s1-s1-s2" name="Login1" source="/opt/robotframework/tests/TestSuite/Login1.robot">
 <test id="s1-s1-s2-t1" name="Imap">
 <kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
 <arg>0.5</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20211122 11:25:29.583" endtime="20211122 11:25:29.583"/>
+<status status="PASS" starttime="20211122 11:30:40.757" endtime="20211122 11:30:40.757"/>
 </kw>
 <kw name="Navigate_to_Landing_Page" library="Common">
 <arg>Landing</arg>
@@ -47,26 +47,26 @@
 <arg>${BROWSER}</arg>
 <arg>${Alias}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211122 11:25:29.584" level="INFO">Opening browser 'chrome' to base url 'https://mcall-uat.motionscloud.com/users/sign_in?locale=en'.</msg>
-<status status="PASS" starttime="20211122 11:25:29.584" endtime="20211122 11:25:32.763"/>
+<msg timestamp="20211122 11:30:40.758" level="INFO">Opening browser 'chrome' to base url 'https://mcall-uat.motionscloud.com/users/sign_in?locale=en'.</msg>
+<status status="PASS" starttime="20211122 11:30:40.758" endtime="20211122 11:30:43.855"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211122 11:25:32.764" endtime="20211122 11:25:33.395"/>
+<status status="PASS" starttime="20211122 11:30:43.856" endtime="20211122 11:30:44.498"/>
 </kw>
-<status status="PASS" starttime="20211122 11:25:29.583" endtime="20211122 11:25:33.396"/>
+<status status="PASS" starttime="20211122 11:30:40.757" endtime="20211122 11:30:44.499"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20211122 11:25:33.396" endtime="20211122 11:25:33.953"/>
+<status status="PASS" starttime="20211122 11:30:44.499" endtime="20211122 11:30:45.055"/>
 </kw>
-<status status="PASS" starttime="20211122 11:25:29.582" endtime="20211122 11:25:33.954"/>
+<status status="PASS" starttime="20211122 11:30:40.756" endtime="20211122 11:30:45.056"/>
 </test>
-<status status="PASS" starttime="20211122 11:25:29.535" endtime="20211122 11:25:33.955"/>
+<status status="PASS" starttime="20211122 11:30:40.711" endtime="20211122 11:30:45.057"/>
 </suite>
-<status status="PASS" starttime="20211122 11:25:24.620" endtime="20211122 11:25:33.956"/>
+<status status="PASS" starttime="20211122 11:30:35.731" endtime="20211122 11:30:45.060"/>
 </suite>
-<status status="PASS" starttime="20211122 11:25:24.595" endtime="20211122 11:25:33.957"/>
+<status status="PASS" starttime="20211122 11:30:35.706" endtime="20211122 11:30:45.062"/>
 </suite>
 <statistics>
 <total>
