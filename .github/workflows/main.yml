@@ -37,7 +37,7 @@ jobs:
           name: robotframework report
           path: reports
       - name: Debug
-        run: ls - la ${PWD}/reports
+        run: ls -la ${PWD}/reports
       - name: zip report
         uses: papeloto/action-zip@v1
         with:
@@ -79,6 +79,6 @@ jobs:
             # Optional converting Markdown to HTML (set content_type to text/html too):
             #convert_markdown: true
             # Optional attachments:
-            attachments: ${PWD}/reports.zip
+            attachments: ${PWD}/reports/report.html
             # Optional priority: 'high', 'normal' (default) or 'low'
             #priority: low
