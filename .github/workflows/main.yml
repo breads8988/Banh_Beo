@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create folder for reports
-        run:  mkdir reports
+        run:  rm -rf reports && mkdir reports
       - name: Robot Framework Test
         # NOTE: joonvena/robotframework-docker-action@v0.1 had permissions issue
         # This action is based on a Docker image. I had to fall back to that image
