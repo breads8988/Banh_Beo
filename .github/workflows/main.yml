@@ -38,6 +38,10 @@ jobs:
           path: reports
       - name: Debug
         run: ls -la && pwd && chmod ugo+rwx reports
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Output reports
       - name: zip report
         uses: papeloto/action-zip@v1
         with:
