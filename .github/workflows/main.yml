@@ -37,8 +37,10 @@ jobs:
           name: robotframework report
           path: reports
       - name: zip report
-        run: apt-get install zip && zip -r ${PWD}/reports.zip ${PWD}/reports
-        
+        uses: papeloto/action-zip@v1
+        with:
+          files: ${PWD}/reports
+          dest: ${PWD}/reports.zip
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
