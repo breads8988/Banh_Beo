@@ -19,7 +19,7 @@ Resource            ../Step_Definition/KW_Common.robot
 
 Navigate_To_United_Kingdom_Site
     Navigate_to_Landing_Page    Shopify     ${Shopify_URL}
-    # Wait_and_Click_Element    ${Shop_Password_Btn}
+    Wait_and_Click_Element    ${Shop_Password_Btn}
     # Wait_and_Input_Text    ${Shop_Password_Box}    collinson
     # Wait_and_Click_Element    ${Shop_Enter_Btn}
     # Wait_and_Hover_Element    ${Shop_Shop_Dropdown}
