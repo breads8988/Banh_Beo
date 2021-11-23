@@ -11,6 +11,7 @@ Resource            ../Objects/Register.robot
 Resource            ../Objects/Strapi/Login_Page.robot
 
 *** Variables ***
+${BROWSER}		%{BROWSER}
 
 *** Keywords ***
 
